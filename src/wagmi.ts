@@ -24,9 +24,8 @@ createAppKit({
     icons: ["https://critterholes.xyz//logo.png"],
   },
   features: {
-    history: false,
   },
-  themeMode: "dark",
+  themeMode: "light",
 });
 
 export const config = wagmiAdapter.wagmiConfig;
