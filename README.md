@@ -13,12 +13,14 @@
 
 ---
 
-## 🎮 Overview
+## 🎮 Overview 
 
 **CritterHoles on Celo** is a blockchain-based casual game built on **Celo Mainnet**, where players whack critters, earn points, and claim on-chain rewards.  
 The game uses **React + TypeScript + Vite** with **Reown AppKit**, **wagmi**, and a Cloudflare backend for claim verification.
 
 ---
+
+## [demo](https://farcaster.xyz/miniapps/eK5FT3tFgDQg/critter-holes-on-celo)
 
 ## 🧩 Gameplay
 
