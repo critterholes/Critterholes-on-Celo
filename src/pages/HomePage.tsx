@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAccount } from 'wagmi';
-import { useHasHammerNft } from '../hooks/useHasHammerNft';
+import { useHasHammerNft } from '../hooks/nft/useHasHammerNft';
 import { IoInformationCircle, IoGameController, IoPerson, IoSwapHorizontal } from 'react-icons/io5';
 
 const HomePage: React.FC = () => {

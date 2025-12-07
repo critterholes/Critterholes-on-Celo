@@ -14,9 +14,9 @@ import {
   USDC_ADDRESS,
   CHP_DECIMALS,
   USDC_DECIMALS,
-} from './constants.ts';
-import { chSwapAbi } from './chSwap';
-import { erc20Abi } from './erc20';
+} from '../constants.ts';
+import { chSwapAbi } from './chSwap.ts';
+import { erc20Abi } from '../erc20.ts';
 
 export type SwapMode = 'buy' | 'sell';
 

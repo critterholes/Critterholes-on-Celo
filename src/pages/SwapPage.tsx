@@ -1,7 +1,7 @@
 // src/pages/SwapPage.tsx
 import { Link } from 'react-router-dom';
-import { useSwapKiosk } from '../hooks/useSwapKiosk';
-import type { SwapMode } from '../hooks/useSwapKiosk';
+import { useSwapKiosk } from '../hooks/swap/useSwapKiosk';
+import type { SwapMode } from '../hooks/swap/useSwapKiosk';
 import { useAccount } from 'wagmi';
 import gameBg from '/src/assets/game-bg.jpg';
 
