@@ -1,7 +1,7 @@
 // src/pages/UserPage.tsx
 import React from 'react';
 import { useAccount, useReadContract } from 'wagmi';
-import { useFarcasterAccount } from '../hooks/useFarcasterAccount';
+import { useFarcasterAccount } from '../hooks/farcaster/useFarcasterAccount';
 import { chpContractAddress, chpContractAbi } from '../config/chp';
 import gameBg from '/src/assets/game-bg.jpg';
 import { Link } from 'react-router-dom';
