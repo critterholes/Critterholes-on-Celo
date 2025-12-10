@@ -69,7 +69,7 @@ const MintPage: React.FC = () => {
       <h1 className="text-4xl font-bold mb-4">Mint a Hammer on Celo</h1>
       <p className="text-xl mb-8">You need a hammer NFT to play Critter Hole.</p>
       
-      <p className="text-3xl font-semibold mb-6">Price: {isMintPriceLoading ? 'Loading...' : `${mintPriceEth} CELO/ETH`}</p>
+      <p className="text-3xl font-semibold mb-6">Price: {isMintPriceLoading ? 'Loading...' : `${mintPriceEth} CELO`}</p>
 
       <button
         onClick={handleMint}
