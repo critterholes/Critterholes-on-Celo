@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import React, { useEffect, useMemo } from 'react';
+import {  Link } from 'react-router-dom';
 import { useAccount, useWriteContract, useWaitForTransactionReceipt, useReadContract } from 'wagmi';
 import { BaseError, formatEther } from 'viem';
 import { useHammerLevel } from '../hooks/nft/useHammerLevel';
@@ -10,7 +10,6 @@ import { FaArrowUp, FaHammer } from 'react-icons/fa';
 const MAX_LEVEL = 2;
 
 const UpgradePage: React.FC = () => {
-    const navigate = useNavigate();
     const { address, isConnected } = useAccount();
     const { hammerLevel, hasNft, isLoading: isLoadingLevel } = useHammerLevel();
 
@@ -98,32 +97,32 @@ const UpgradePage: React.FC = () => {
                 </svg>
             </Link>
 
-            <div className="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-2xl max-w-lg w-full text-center">
-                <h1 className="text-5xl font-extrabold text-gray-800 mb-6 flex items-center justify-center gap-x-3">
-                    <FaHammer className="text-yellow-600"/> Hammer Upgrade
+            <div className="bg-black/50 backdrop-blur-sm p-8 rounded-xl shadow-2xl max-w-lg w-full text-center text-white">
+                <h1 className="text-5xl font-extrabold text-white mb-6 flex items-center justify-center gap-x-3" style={{ textShadow: '1px 1px 2px #000' }}>
+                    <FaHammer className="text-yellow-400"/> Hammer Upgrade
                 </h1>
 
-                <div className="mb-8 border-b pb-4">
-                    <p className="text-xl font-semibold text-gray-700">Your Current Level</p>
-                    <p className="text-6xl font-black text-blue-600">{hammerLevel}</p>
-                    <p className="text-md text-gray-500">(Score Multiplier: x{hammerLevel === 1 ? 2 : hammerLevel === 2 ? 3 : 1})</p>
+                <div className="mb-8 border-b border-white/30 pb-4">
+                    <p className="text-xl font-semibold text-gray-300">Your Current Level</p>
+                    <p className="text-6xl font-black text-blue-300">{hammerLevel}</p>
+                    <p className="text-md text-gray-400">(Score Multiplier: x{hammerLevel === 1 ? 2 : hammerLevel === 2 ? 3 : 1})</p>
                 </div>
 
                 {isMaxLevel ? (
-                    <div className="bg-green-100 text-green-700 p-4 rounded-lg">
+                    <div className="bg-green-700/50 text-white p-4 rounded-lg">
                         <p className="text-2xl font-bold">MAX LEVEL REACHED (Level {MAX_LEVEL})</p>
                         <p className="mt-2">No further upgrades are available at this time.</p>
                     </div>
                 ) : (
                     <>
                         <div className="mb-8">
-                            <p className="text-xl font-semibold text-gray-700 flex items-center justify-center gap-x-2">
-                                <FaArrowUp className="text-red-500"/> Upgrade to Level {targetLevelId.toString()}
+                            <p className="text-xl font-semibold text-gray-300 flex items-center justify-center gap-x-2">
+                                <FaArrowUp className="text-red-300"/> Upgrade to Level {targetLevelId.toString()}
                             </p>
-                            <p className="text-3xl font-bold text-red-600 mt-2">
+                            <p className="text-3xl font-bold text-red-300 mt-2">
                                 Cost: {isPriceLoading ? 'Loading Price...' : isPriceError ? 'Error Loading Price' : `${priceEth} CELO/ETH`}
                             </p>
-                            <p className="text-sm text-gray-500 mt-1">(Multiplier: x{hammerLevel + 1 === 1 ? 2 : hammerLevel + 1 === 2 ? 3 : 1})</p>
+                            <p className="text-sm text-gray-400 mt-1">(Multiplier: x{hammerLevel + 1 === 1 ? 2 : hammerLevel + 1 === 2 ? 3 : 1})</p>
                         </div>
 
                         <button
@@ -141,7 +140,7 @@ const UpgradePage: React.FC = () => {
 
                 <div className="mt-4 text-center min-h-[24px]">
                     {upgradeError && (
-                        <div className="text-red-500 mt-4">
+                        <div className="text-red-400 mt-4">
                             Error: {upgradeError instanceof BaseError ? upgradeError.shortMessage : upgradeError.message}
                         </div>
                     )}
