@@ -60,7 +60,7 @@ const HomePage: React.FC = () => {
           <button 
             onClick={handlePlayClick} 
             disabled={isLoading}
-            className="flex flex-col items-center p-4 bg-orange-500 rounded-lg transform transition-all hover:scale-110 border-b-4 border-orange-700 disabled:bg-gray-500"
+            className="flex flex-col items-center p-4 bg-black/20  rounded-lg transform transition-all hover:scale-110"
           >
             <IoGameController size={40} className="text-white" />
             <span className="mt-2 font-bold">{isLoading ? "Checking..." : "Play"}</span>
