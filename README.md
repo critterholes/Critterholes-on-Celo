@@ -20,7 +20,7 @@ The game uses **React + TypeScript + Vite** with **Reown AppKit**, **wagmi**, an
 
 ---
 
-## [demo](https://farcaster.xyz/miniapps/eK5FT3tFgDQg/critter-holes-on-celo)
+## [DEMO ON FARCASTER](https://farcaster.xyz/miniapps/eK5FT3tFgDQg/critter-holes-on-celo)
 
 ## 🧩 Gameplay
 
